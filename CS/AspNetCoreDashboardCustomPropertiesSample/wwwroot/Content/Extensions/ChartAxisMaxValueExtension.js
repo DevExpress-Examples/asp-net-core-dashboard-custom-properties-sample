@@ -1,4 +1,4 @@
-﻿var ChartAxisMaxValueExtension = (function() {
+﻿var ChartAxisMaxValueExtension = (function () {
     var Model = DevExpress.Dashboard.Model;
     var Designer = DevExpress.Dashboard.Designer;
 
@@ -37,14 +37,14 @@
 
     // 2. Viewer
     function onItemWidgetOptionsPrepared(args) {
-        if(args.dashboardItem.customProperties.getValue(axisMaxValueEnabledProperty.propertyName)) {
+        if (args.dashboardItem.customProperties.getValue(axisMaxValueEnabledProperty.propertyName)) {
             var value = args.dashboardItem.customProperties.getValue(axisMaxValueConstantProperty.propertyName)
-            if(args.dashboardItem.customProperties.getValue(axisMaxValueIsBoundProperty.propertyName)) {
+            if (args.dashboardItem.customProperties.getValue(axisMaxValueIsBoundProperty.propertyName)) {
                 var measureId = args.dashboardItem.customProperties.getValue(axisMaxValueDataItemProperty.propertyName)
                 value = args.itemData.getMeasureValue(measureId).getValue()
             }
             args.options.valueAxis[0].visualRange = [null, value]
-        }   
+        }
     }
 
     // 3. Designer
@@ -56,7 +56,7 @@
     }
     function changeDisabledState(dxForm, fieldName, isDisabled) {
         let itemOptions = dxForm.itemOption(fieldName)
-        if(itemOptions) {
+        if (itemOptions) {
             let editorOptions = itemOptions.editorOptions || {}
             editorOptions.disabled = isDisabled
             dxForm.itemOption(fieldName, "editorOptions", editorOptions)
@@ -82,10 +82,10 @@
         if (args.dashboardItem instanceof Model.ChartItem) {
             args.addSection({
                 title: "Primary Axis Max Value (Custom)",
-                onFieldDataChanged: (e) => {
+                onFieldDataChanged: function (e) {
                     updateFormState(e.component, args.dashboardItem);
                 },
-                onInitialized: (e) => {
+                onInitialized: function (e) {
                     updateFormState(e.component, args.dashboardItem);
                 },
                 items: [
@@ -130,17 +130,16 @@
                         editorOptions: {
                             displayExpr: "text",
                             valueExpr: "value",
-                            items: args.dashboardItem.hiddenMeasures().map(measure => ({
-                                text: measure.name() || measure.dataMember(),
-                                value: measure.uniqueName()
-                            })),
+                            items: args.dashboardItem.hiddenMeasures().map(function (measure) {
+                                return { text: measure.name() || measure.dataMember(), value: measure.uniqueName() }
+                            }),
                         }
                     }
                 ]
             })
         }
     }
-    
+
     // 4. Event Subscription
     function ChartAxisMaxValueExtension(dashboardControl) {
         this.name = "ChartAxisMaxValueExtension";
