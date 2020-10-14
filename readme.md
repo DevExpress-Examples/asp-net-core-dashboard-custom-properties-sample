@@ -1,7 +1,7 @@
 *Files to look at*:
-- [Extensions](./CS/AspNetCoreDashboardCustomPropertiesSample/wwwroot/Content/Extensions)
-- [_Layout.cshtml](./CS/AspNetCoreDashboardCustomPropertiesSample/Pages/_Layout.cshtml)
-- [Index.cshtml](./CS/AspNetCoreDashboardCustomPropertiesSample/Pages/Index.cshtml)
+- [Extensions](./CS/AspNetCoreDashboard/wwwroot/Content/Extensions)
+- [_Layout.cshtml](./CS/AspNetCoreDashboard/Pages/_Layout.cshtml)
+- [Index.cshtml](./CS/AspNetCoreDashboard/Pages/Index.cshtml)
 
 # ASP.NET Core Dashboard - Custom Properties
 <!-- run online -->
