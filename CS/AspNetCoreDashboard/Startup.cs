@@ -65,6 +65,9 @@ namespace CustomPropertiesSample {
                             e.Data = Invoices.CreateData();
                         }
                     };
+                    configurator.ConfigureItemDataCalculation += (s, e) => {
+                        e.CalculateAllTotals = true;
+                    };
                 });
         }
 
