@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="20.2.4" /><PackageReference Include="System.Data.SQLite.Core" Version="1.0.112.2" /><PackageReference Include="BuildBundlerMinifier" Version="3.2.447" /><PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.76" /></ItemGroup>
+    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="20.2.5" /><PackageReference Include="System.Data.SQLite.Core" Version="1.0.112.2" /><PackageReference Include="BuildBundlerMinifier" Version="3.2.447" /><PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.76" /></ItemGroup>
   <ItemGroup>
     <Compile Remove="node_modules\**" />
     <Content Remove="node_modules\**" />
