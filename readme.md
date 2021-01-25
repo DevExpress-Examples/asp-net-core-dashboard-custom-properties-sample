@@ -80,6 +80,8 @@ The following example contains a set of custom properties that demonstrate diffe
 
 ### ChartScaleBreaksExtension
 
+[View Extension](./CS/AspNetCoreDashboard/wwwroot/Content/Extensions/ChartScaleBreaksExtension.js)
+
 This extension enables or disables scale breaks for the Chart dashboard item.
 
 ![](images/ChartScaleBreaksExtension.png)
@@ -90,6 +92,8 @@ This extension enables or disables scale breaks for the Chart dashboard item.
 
 ### ChartLineOptionsExtension
 
+[View Extension](./CS/AspNetCoreDashboard/wwwroot/Content/Extensions/ChartLineOptionsExtension.js)
+
 This extension changes the dash style of each series line in the Chart dashboard item.
 
 ![](images/ChartLineOptionsExtension.png)
@@ -99,6 +103,8 @@ This extension changes the dash style of each series line in the Chart dashboard
 - Integrates a _Line Options (Custom)_ section into the data item menu with the [SelectBox](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxSelectBox/) widget as an editor.
 
 ### DashboardDescriptionExtension
+
+[View Extension](./CS/AspNetCoreDashboard/wwwroot/Content/Extensions/DashboardDescriptionExtension.js)
 
 This extension enables you to set a dashboard's description in the dashboard menu. The dashboard description is displayed when you hover over the info button in the dashboard title. 
 
@@ -111,6 +117,8 @@ This extension enables you to set a dashboard's description in the dashboard men
 
 ### ItemDescriptionExtension
 
+[View Extension](./CS/AspNetCoreDashboard/wwwroot/Content/Extensions/ItemDescriptionExtension.js)
+
 This extension enables you to set a description for each dashboard item. The dashboard item description is displayed when you hover over the info button in the item's caption. 
 
 ![](images/ItemDescriptionExtension.png)
@@ -122,6 +130,8 @@ Overview:
 
 ### ChartAxisMaxValueExtension
 
+[View Extension](./CS/AspNetCoreDashboard/wwwroot/Content/Extensions/ChartAxisMaxValueExtension.js)
+
 This extension allows you to change the maximum value of the Y-axis in the Chart item. 
 
 ![](images/ChartAxisMaxValueExtension.png)
@@ -132,6 +142,8 @@ Overview:
 - Shows how to enable or disable editors depending on a custom property's value. 
 
 ### ChartConstantLinesExtension
+
+[View Extension](./CS/AspNetCoreDashboard/wwwroot/Content/Extensions/ChartConstantLinesExtension.js)
 
 This extension draws constant lines for the Chart dashboard item.
 
@@ -145,8 +157,8 @@ Overview:
 
 ## Documentation
 
-- [Client-Side Customization](https://docs.devexpress.com/Dashboard/401701/designer-and-viewer-applications/web-dashboard/client-side-customization?v=20.1)
-- [Custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1)
+- [Client-Side Customization](https://docs.devexpress.com/Dashboard/401701)
+- [Custom properties](https://docs.devexpress.com/Dashboard/401702)
 
 ## More Examples
 
