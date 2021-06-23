@@ -3,7 +3,7 @@
 - [_Layout.cshtml](./CS/AspNetCoreDashboard/Pages/_Layout.cshtml)
 - [Index.cshtml](./CS/AspNetCoreDashboard/Pages/Index.cshtml)
 
-# ASP.NET Core Dashboard - Custom Properties
+# Dashboard for ASP.NET Core - Custom Properties
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/260212520/)**
 <!-- run online end -->
