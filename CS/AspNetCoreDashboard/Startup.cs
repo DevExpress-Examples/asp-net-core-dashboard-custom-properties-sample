@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace CustomPropertiesSample {
     public class Startup {
@@ -27,48 +28,52 @@ namespace CustomPropertiesSample {
             services
                 .AddResponseCompression()
                 .AddDevExpressControls()
-                .AddMvc()
+                .AddMvc();
 
-                .AddDefaultDashboardController((configurator, serviceProvider)  => {
-                    configurator.SetConnectionStringsProvider(new DashboardConnectionStringsProvider(Configuration));
+            services.AddScoped<DashboardConfigurator>((IServiceProvider serviceProvider) => {
+                DashboardConfigurator configurator = new DashboardConfigurator();
+                configurator.SetConnectionStringsProvider(new DashboardConnectionStringsProvider(Configuration));
 
-                    DashboardFileStorage dashboardFileStorage = new DashboardFileStorage(FileProvider.GetFileInfo("Data/Dashboards").PhysicalPath);
-                    configurator.SetDashboardStorage(dashboardFileStorage);
+                DashboardFileStorage dashboardFileStorage = new DashboardFileStorage(FileProvider.GetFileInfo("Data/Dashboards").PhysicalPath);
+                configurator.SetDashboardStorage(dashboardFileStorage);
 
-                    DataSourceInMemoryStorage dataSourceStorage = new DataSourceInMemoryStorage();
+                DataSourceInMemoryStorage dataSourceStorage = new DataSourceInMemoryStorage();
 
-                    // Registers an SQL data source.
-                    DashboardSqlDataSource sqlDataSource = new DashboardSqlDataSource("SQL Data Source", "NWindConnectionString");
-                    sqlDataSource.DataProcessingMode = DataProcessingMode.Client;
-                    SelectQuery query = SelectQueryFluentBuilder
-                        .AddTable("Categories")
-                        .Join("Products", "CategoryID")
-                        .SelectAllColumns()
-                        .Build("Products_Categories");
-                    sqlDataSource.Queries.Add(query);
-                    dataSourceStorage.RegisterDataSource("sqlDataSource", sqlDataSource.SaveToXml());
+                // Registers an SQL data source.
+                DashboardSqlDataSource sqlDataSource = new DashboardSqlDataSource("SQL Data Source", "NWindConnectionString");
+                sqlDataSource.DataProcessingMode = DataProcessingMode.Client;
+                SelectQuery query = SelectQueryFluentBuilder
+                    .AddTable("Categories")
+                    .Join("Products", "CategoryID")
+                    .SelectAllColumns()
+                    .Build("Products_Categories");
+                sqlDataSource.Queries.Add(query);
+                dataSourceStorage.RegisterDataSource("sqlDataSource", sqlDataSource.SaveToXml());
 
-                    // Registers an Object data source.
-                    DashboardObjectDataSource objDataSource = new DashboardObjectDataSource("Object Data Source");
-                    dataSourceStorage.RegisterDataSource("objDataSource", objDataSource.SaveToXml());
+                // Registers an Object data source.
+                DashboardObjectDataSource objDataSource = new DashboardObjectDataSource("Object Data Source");
+                dataSourceStorage.RegisterDataSource("objDataSource", objDataSource.SaveToXml());
 
-                    // Registers an Excel data source.
-                    DashboardExcelDataSource excelDataSource = new DashboardExcelDataSource("Excel Data Source");
-                    excelDataSource.FileName = FileProvider.GetFileInfo("Data/Sales.xlsx").PhysicalPath;
-                    excelDataSource.SourceOptions = new ExcelSourceOptions(new ExcelWorksheetSettings("Sheet1"));
-                    dataSourceStorage.RegisterDataSource("excelDataSource", excelDataSource.SaveToXml());
+                // Registers an Excel data source.
+                DashboardExcelDataSource excelDataSource = new DashboardExcelDataSource("Excel Data Source");
+                excelDataSource.FileName = FileProvider.GetFileInfo("Data/Sales.xlsx").PhysicalPath;
+                excelDataSource.SourceOptions = new ExcelSourceOptions(new ExcelWorksheetSettings("Sheet1"));
+                dataSourceStorage.RegisterDataSource("excelDataSource", excelDataSource.SaveToXml());
 
-                    configurator.SetDataSourceStorage(dataSourceStorage);
+                configurator.SetDataSourceStorage(dataSourceStorage);
 
-                    configurator.DataLoading += (s, e) => {
-                        if(e.DataSourceName == "Object Data Source") {
-                            e.Data = Invoices.CreateData();
-                        }
-                    };
-                    configurator.ConfigureItemDataCalculation += (s, e) => {
-                        e.CalculateAllTotals = true;
-                    };
-                });
+                configurator.DataLoading += (s, e) => {
+                    if (e.DataSourceName == "Object Data Source")
+                    {
+                        e.Data = Invoices.CreateData();
+                    }
+                };
+                configurator.ConfigureItemDataCalculation += (s, e) => {
+                    e.CalculateAllTotals = true;
+                };
+                return configurator;
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -87,7 +92,7 @@ namespace CustomPropertiesSample {
 
             app.UseRouting();
             app.UseEndpoints(endpoints => {
-                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "dashboardControl");
+                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboard", "DefaultDashboard");
                 endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "default",
