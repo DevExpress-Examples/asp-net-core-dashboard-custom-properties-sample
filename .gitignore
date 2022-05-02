@@ -303,3 +303,7 @@ TesterMetadata.xml
 
 # Backup files
 *.bak
+CS/AspNetCoreDashboard/.npmrc
+CS/AspNetCoreDashboard/package-lock.json
+CS/AspNetCoreDashboard/wwwroot/css/site.min.css
+CS/AspNetCoreDashboard/wwwroot/js/site.min.js

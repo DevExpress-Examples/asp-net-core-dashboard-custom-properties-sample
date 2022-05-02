@@ -56,12 +56,14 @@ To register an extension, attach the extension script before the control is rend
     <script type="text/javascript">
         function onBeforeRender(control) {
             control.registerExtension(new DevExpress.Dashboard.DashboardPanelExtension(control));
-            control.registerExtension(new ChartScaleBreaksExtension(control))
-            control.registerExtension(new ChartLineOptionsExtension(control))
-            control.registerExtension(new ChartAxisMaxValueExtension(control))
-            control.registerExtension(new ChartConstantLinesExtension(control))
-            control.registerExtension(new ItemDescriptionExtension(control))
-            control.registerExtension(new DashboardDescriptionExtension(control))
+
+            control.registerExtension(new ChartScaleBreaksExtension(control));
+            control.registerExtension(new ChartLineOptionsExtension(control));
+            control.registerExtension(new ChartAxisMaxValueExtension(control));
+            control.registerExtension(new ChartConstantLinesExtension(control));
+            control.registerExtension(new ItemDescriptionExtension(control));
+            control.registerExtension(new DashboardDescriptionExtension(control));
+            control.registerExtension(new GridHeaderFilterExtension(control));
         }
     </script>
 </head>
@@ -75,6 +77,7 @@ To register an extension, attach the extension script before the control is rend
     <script src="~/Content/Extensions/ItemDescriptionExtension.js"></script>
     <script src="~/Content/Extensions/DashboardDescriptionExtension.js"></script>
     <script src="~/Content/Extensions/ChartAxisMaxValueExtension.js"></script>
+    <script src="~/Content/Extensions/GridHeaderFilterExtension.js"></script>
 </body>
 </html>
 ```
@@ -159,6 +162,18 @@ Overview:
 - Shows how to work with complex custom values that are saved as an array.
 - Demonstrates how to bind a custom property to a list of data items.
 - Customizes export to display the result in the exported document.
+
+### GridHeaderFilterExtension
+
+[View Extension](./CS/AspNetCoreDashboard/wwwroot/Content/Extensions/GridHeaderFilterExtension.js)
+
+This extension adds Header Filter buttons to the Grid dashboard item.
+
+![](images/GridHeaderFilterExtension.png)
+
+Overview:
+- Adds a custom property for a specific dashboard item (Grid).
+- Integrates a _Header Filter (Custom)_ section, which contains the [ButtonGroup](https://js.devexpress.com/DevExtreme/ApiReference/UI_Components/dxButtonGroup/) widget as an editor, into the _Options_ menu.
 
 ## Documentation
 
