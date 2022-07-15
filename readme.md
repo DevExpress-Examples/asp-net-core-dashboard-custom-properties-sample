@@ -3,10 +3,6 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T885558)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-*Files to look at*:
-- [Extensions](./CS/AspNetCoreDashboard/wwwroot/Content/Extensions)
-- [_Layout.cshtml](./CS/AspNetCoreDashboard/Pages/_Layout.cshtml)
-- [Index.cshtml](./CS/AspNetCoreDashboard/Pages/Index.cshtml)
 
 # Dashboard for ASP.NET Core - Custom Properties
 <!-- run online -->
@@ -15,6 +11,12 @@
 
 
 The example shows how to create [custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1) for the Web Dashboard.
+
+## Files to Look At
+
+- [Extensions](./CS/AspNetCoreDashboard/wwwroot/Content/Extensions)
+- [_Layout.cshtml](./CS/AspNetCoreDashboard/Pages/_Layout.cshtml)
+- [Index.cshtml](./CS/AspNetCoreDashboard/Pages/Index.cshtml)
 
 ## Overview
 
