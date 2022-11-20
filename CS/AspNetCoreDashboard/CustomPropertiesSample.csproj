@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="22.1.*" />
+    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="22.2.*" />
 		<PackageReference Include="System.Data.SQLite.Core" Version="1.0.112.2" />
 		<PackageReference Include="BuildBundlerMinifier" Version="3.2.447" />
 		<PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.76" />
