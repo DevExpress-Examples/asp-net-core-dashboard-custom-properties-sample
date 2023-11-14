@@ -4,11 +4,13 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# Dashboard for ASP.NET Core - Custom Properties
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/260212520/)**
-<!-- run online end -->
+<!-- default badges list -->
+![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/260212520/22.2.2%2B)
+[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T885558)
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 
+# Dashboard for ASP.NET Core - Custom Properties
 
 The example shows how to create [custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1) for the Web Dashboard.
 
@@ -98,7 +100,7 @@ This extension enables or disables scale breaks for the Chart dashboard item.
 
 **Overview**:
 - Adds a custom Boolean property for a specific dashboard item (Chart).
-- Integrates a _Scale breaks (Custom)_ section into the _Options_ menu with the [CheckBox](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxCheckBox/) widget as an editor.
+- Integrates a _Scale breaks (Custom)_ section into the _Options_ menu with the [CheckBox](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxCheckBox/) widget as an editor.
 
 ### ChartLineOptionsExtension
 
@@ -110,7 +112,7 @@ This extension changes the dash style of each series line in the Chart dashboard
 
 **Overview**:
 - Adds a string custom property for a specific data item container (Chart's series).
-- Integrates a _Line Options (Custom)_ section into the data item menu with the [SelectBox](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxSelectBox/) widget as an editor.
+- Integrates a _Line Options (Custom)_ section into the data item menu with the [SelectBox](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxSelectBox/) widget as an editor.
 
 ### DashboardDescriptionExtension
 
@@ -123,7 +125,7 @@ This extension enables you to set a dashboard's description in the dashboard men
 **Overview**:
 - Adds a custom string property for a dashboard.
 - Shows how to add a new item to the [ToolBox](https://docs.devexpress.com/Dashboard/117442/designer-and-viewer-applications/web-dashboard/ui-elements/toolbox?v=20.1). In this example, a new item is added to the [dashboard menu](https://docs.devexpress.com/Dashboard/117444/designer-and-viewer-applications/web-dashboard/ui-elements/dashboard-menu?v=20.1).
-- Demonstrates how to create complex editors using templates. In this example, it is the [](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxPopup/) widgets with the [TextArea](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxTextArea/) and [Button](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxButtonGroup/) widgets inside.
+- Demonstrates how to create complex editors using templates. In this example, it is the [](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxPopup/) widgets with the [TextArea](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxTextArea/) and [Button](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxButtonGroup/) widgets inside.
 
 ### ItemDescriptionExtension
 

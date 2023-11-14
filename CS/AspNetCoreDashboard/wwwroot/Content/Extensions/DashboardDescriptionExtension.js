@@ -66,7 +66,7 @@
                         var description = dxForm.option("formData")["description"];
 
                         dashboardControl.dashboard().customProperties.setValue(dashboardDescriptionProperty.propertyName, description);
-                        var viewerApiExtension = dashboardControl.findExtension('viewer-api');
+                        var viewerApiExtension = dashboardControl.findExtension('viewerApi');
                         if (viewerApiExtension) {
                             viewerApiExtension.updateDashboardTitleToolbar();
                         }
@@ -93,7 +93,7 @@
         var menuItem = createMenuItem();
         this.name = "DashboardDescription",
         this.start = function () {
-            var viewerApiExtension = dashboardControl.findExtension('viewer-api');
+            var viewerApiExtension = dashboardControl.findExtension('viewerApi');
             if (viewerApiExtension) {
                 viewerApiExtension.on('dashboardTitleToolbarUpdated', onDashboardTitleToolbarUpdated);
             }
@@ -103,7 +103,7 @@
             }
         },
         this.stop = function () {
-            var viewerApiExtension = dashboardControl.findExtension('viewer-api');
+            var viewerApiExtension = dashboardControl.findExtension('viewerApi');
             if (viewerApiExtension) {
                 viewerApiExtension.off('dashboardTitleToolbarUpdated', onDashboardTitleToolbarUpdated);
             }

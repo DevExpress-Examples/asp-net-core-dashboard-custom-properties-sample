@@ -44,21 +44,21 @@
     function ChartScaleBreaksExtension(dashboardControl) {
         this.name = "ScaleBreaks",
         this.start = function () {
-            var viewerApiExtension = dashboardControl.findExtension('viewer-api');
+            var viewerApiExtension = dashboardControl.findExtension('viewerApi');
             if (viewerApiExtension) {
                 viewerApiExtension.on('itemWidgetOptionsPrepared', onItemWidgetOptionsPrepared);
             }
-            var optionsPanelExtension = dashboardControl.findExtension("item-options-panel");
+            var optionsPanelExtension = dashboardControl.findExtension("itemOptionsPanel");
             if (optionsPanelExtension) {
                 optionsPanelExtension.on('customizeSections', onCustomizeSections);
             }
         },
         this.stop = function () {
-            var viewerApiExtension = dashboardControl.findExtension('viewer-api');
+            var viewerApiExtension = dashboardControl.findExtension('viewerApi');
             if (viewerApiExtension) {
                 viewerApiExtension.off('itemWidgetOptionsPrepared', onItemWidgetOptionsPrepared);
             }
-            var optionsPanelExtension = dashboardControl.findExtension("item-options-panel");
+            var optionsPanelExtension = dashboardControl.findExtension("itemOptionsPanel");
             if (optionsPanelExtension) {
                 optionsPanelExtension.off('customizeSections', onCustomizeSections);
             }

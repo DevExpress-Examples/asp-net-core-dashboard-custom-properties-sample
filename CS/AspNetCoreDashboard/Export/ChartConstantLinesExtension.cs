@@ -1,4 +1,4 @@
-﻿
+
 using DevExpress.DashboardCommon;
 using DevExpress.DashboardCommon.ViewerData;
 using DevExpress.DashboardWeb;

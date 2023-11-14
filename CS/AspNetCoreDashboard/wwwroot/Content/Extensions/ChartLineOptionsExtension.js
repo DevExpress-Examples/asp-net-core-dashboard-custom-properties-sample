@@ -63,21 +63,21 @@
     function ChartLineOptionsExtension(dashboardControl) {
         this.name = 'ChartLineOptions',
         this.start = function () {
-            let viewerApiExtension = dashboardControl.findExtension('viewer-api');
+            let viewerApiExtension = dashboardControl.findExtension('viewerApi');
             if (viewerApiExtension) {
                 viewerApiExtension.on('itemWidgetOptionsPrepared', onItemWidgetOptionsPrepared);
             }
-            let bindingPanelExtension = dashboardControl.findExtension("item-binding-panel");
+            let bindingPanelExtension = dashboardControl.findExtension("itemBindingPanel");
             if (bindingPanelExtension) {
                 bindingPanelExtension.on('customizeDataItemContainerSections', onCustomizeSections);
             }
         },
         this.stop = function () {
-            let viewerApiExtension = dashboardControl.findExtension('viewer-api');
+            let viewerApiExtension = dashboardControl.findExtension('viewerApi');
             if (viewerApiExtension) {
                 viewerApiExtension.off('itemWidgetOptionsPrepared', onItemWidgetOptionsPrepared);
             }
-            let bindingPanelExtension = dashboardControl.findExtension("item-binding-panel");
+            let bindingPanelExtension = dashboardControl.findExtension("itemBindingPanel");
             if (bindingPanelExtension) {
                 bindingPanelExtension.off('customizeDataItemContainerSections', onCustomizeSections);
             }
