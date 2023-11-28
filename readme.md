@@ -122,7 +122,7 @@ This extension enables you to set a dashboard's description in the dashboard men
 **Overview**:
 - Adds a custom string property for a dashboard.
 - Shows how to add a new item to the [ToolBox](https://docs.devexpress.com/Dashboard/117442/designer-and-viewer-applications/web-dashboard/ui-elements/toolbox?v=20.1). In this example, a new item is added to the [dashboard menu](https://docs.devexpress.com/Dashboard/117444/designer-and-viewer-applications/web-dashboard/ui-elements/dashboard-menu?v=20.1).
-- Demonstrates how to create complex editors using templates. In this example, it is the [dxPopup](https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxPopup/) widgets with the [dxTextArea](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxTextArea/) and [dxButton](https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxButton/) widgets inside.
+- Demonstrates how to create complex editors using templates. In this example, it is the [dxPopup](https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxPopup/) widgets with the [dxTextArea](https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxTextArea/) and [dxButton](https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxButton/) widgets inside.
 
 ### ItemDescriptionExtension
 
