@@ -4,9 +4,6 @@
 <!-- default badges end -->
 
 # Dashboard for ASP.NET Core - Custom Properties
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/260212520/)**
-<!-- run online end -->
 
 
 The example shows how to create [custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1) for the Web Dashboard.
