@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "CustomPropertiesSample": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:2398;http://localhost:2399"
+    }
+  }
+}
