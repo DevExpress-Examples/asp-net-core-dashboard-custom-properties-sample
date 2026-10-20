@@ -16,7 +16,6 @@ namespace CustomPropertiesSample {
         public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment) {
             Configuration = configuration;
             FileProvider = hostingEnvironment.ContentRootFileProvider;
-            DashboardExportSettings.CompatibilityMode = DashboardExportCompatibilityMode.Restricted;
         }
 
         public IFileProvider FileProvider { get; }
